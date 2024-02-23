@@ -50,36 +50,36 @@ SIGNAL Y : std_logic_vector(7 downto 0);
 
 begin
 
-UUT: Decoder_3_to_8 PORT MAP(
-I => I,
-EN => EN,
-Y => Y
-);
+   UUT: Decoder_3_to_8 PORT MAP(
+   I => I,
+   EN => EN,
+   Y => Y
+   );
 
-process
-begin
+   process
+   begin
 
-EN <= '1';
-I(0) <= '0';
-I(1) <= '0';
-I(2) <= '0';
-WAIT FOR 100ns;
-I(1) <= '1';
-I(2) <= '1';
-WAIT FOR 100ns;
-I(0) <= '1';
-I(2) <= '0';
-WAIT FOR 100ns;
-I(1) <= '0';
-I(2) <= '1';
-WAIT FOR 100ns;
-I(1) <= '1';
-I(2) <= '0';
-WAIT FOR 100ns;
-I(0) <= '0';
-I(1) <= '0';
-I(2) <= '0';
-EN <= '0';
-WAIT;
-end process;
+   EN <= '1';
+   I(0) <= '0';
+   I(1) <= '0';
+   I(2) <= '0';
+   WAIT FOR 100ns;
+   I(1) <= '1';
+   I(2) <= '1';
+   WAIT FOR 100ns;
+   I(0) <= '1';
+   I(2) <= '0';
+   WAIT FOR 100ns;
+   I(1) <= '0';
+   I(2) <= '1';
+   WAIT FOR 100ns;
+   I(1) <= '1';
+   I(2) <= '0';
+   WAIT FOR 100ns;
+   I(0) <= '0';
+   I(1) <= '0';
+   I(2) <= '0';
+   EN <= '0';
+   WAIT;
+   end process;
 end Behavioral;
